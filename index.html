@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags must come first in the head -->
-	<title>User App</title>
+	<title>Register Form</title>
 	<!-- Bootstrap -->
 	<!-- Included jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -28,7 +28,7 @@
 		<div id="newUser" class="col-sm-6 col-sm-offset-3">
 			<!-- New User Profile -->
 			<form name="newUser" class="register">
-				<h1>Registration</h1>
+				<h1>Register Form</h1>
 				<fieldset class="row1">
 				    <legend>Account Details</legend>
 				    <!-- EMAIL -->
@@ -71,10 +71,10 @@
 							<input type="city" name="city" class="form-control">
 						<label>Country *</label>
 						<br>
-						<select>
+						<select name="country">
 							<option>
 							</option>
-							<option value='1'>United State</option>
+							<option value='United State'>United State</option>
 						</select>
 					</div>
 				</fieldset>
@@ -91,8 +91,8 @@
 
 					<!-- BIRTHDAY -->
 					<div class="form-group">
-						<label>Birthdate *</label>
-						<select class="date">
+						<label>Birthdate :</label>
+						<select name="date">
 						    <option value="1">01
 						    </option>
 						    <option value="2">02
@@ -156,7 +156,7 @@
 						    <option value="31">31
 						    </option>
 						</select>
-						<select>
+						<select name="month">
 						    <option value="1">January
 						    </option>
 						    <option value="2">February
@@ -182,36 +182,48 @@
 						    <option value="12">December
 						    </option>
 						</select>
-						<input class="year" type="text" size="4" maxlength="4"/>e.g 1986
+						<input name="year" type="text" size="4" maxlength="4"/>e.g 1986
 					</div>
 				</fieldset>
 				<fieldset class="row4">
                 	<legend>Terms and Mailing</legend>
 	                <div class="agreement">
-	                    <input type="checkbox" value=""/>
+	                    <input type="checkbox" name="agreement">
 	                    <label>*  I accept the <a href="#">Terms and Conditions</a></label>
 	                </div>
 	                <div class="agreement">
-	                    <input type="checkbox" value=""/>
+	                    <input type="checkbox">
 	                    <label>I want to receive personalized offers by your site</label>
 	                </div>
 	                <div class="agreement">
-	                    <input type="checkbox" value=""/>
+	                    <input type="checkbox">
 	                    <label>Allow partners to send me personalized offers and related services</label>
 	                </div>
 	            </fieldset>
-	            <div><button class="button">Register &raquo;</button></div>
+	            <div>
+	            	<button type="button" id="registerButton">Register &raquo;</button>
+	            </div>
 	        </form>
 	    </div> <!-- New User -->
+	    <div id="updatedProfile" class="col-sm-6 col-sm-offset-3">
+			<h1>THANK YOU FOR REGISTRATING</h1>
+			<div>
+				<h2 id="userEmail"></h2>
+				<h3 id="userName"></h3>
+				<h3 id="userPhone"></h3>
+				<h3 id="userAddress"></h3>
+				<h3 id="userGender"></h3>
+				<h3 id="userBirthday"></h3>
+			</div>
+		</div>
 	</div> <!-- Container -->
-					
 
 		
-		<!-- Bootstrap core JavaScript ================================================== -->
-		<!-- Included jQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-		<!-- Custom JavaScript -->
-		<script src="js/main.js"></script>
-		
+	<!-- Bootstrap core JavaScript ================================================== -->
+	<!-- Included jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<!-- Custom JavaScript -->
+	<script src="js/main.js"></script>
+	
 </body>
 </html>
