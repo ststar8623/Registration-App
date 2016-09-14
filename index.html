@@ -72,9 +72,8 @@
 						<label>Country *</label>
 						<br>
 						<select name="country">
-							<option>
-							</option>
-							<option value='United State'>United State</option>
+							<option value='USA'>United State</option>
+							<option value='Canada'>Canada</option>
 						</select>
 					</div>
 				</fieldset>
@@ -184,6 +183,13 @@
 						</select>
 						<input name="year" type="text" size="4" maxlength="4"/>e.g 1986
 					</div>
+					<div class="form-group">
+						<label>Preferred Language :</label>
+						<select name='lang' id='lang'>
+							<option value='en'>English</option>
+							<option value='es'>Spanish</option>
+						</select>
+					</div>
 				</fieldset>
 				<fieldset class="row4">
                 	<legend>Terms and Mailing</legend>
@@ -208,6 +214,7 @@
 	    <div id="updatedProfile" class="col-sm-6 col-sm-offset-3">
 			<h1>THANK YOU FOR REGISTRATING</h1>
 			<div>
+				<h2 id="greeting"></h1>
 				<h2 id="userEmail"></h2>
 				<h3 id="userName"></h3>
 				<h3 id="userPhone"></h3>
@@ -223,6 +230,7 @@
 	<!-- Included jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<!-- Custom JavaScript -->
+	<script src="js/greetr.js"></script>
 	<script src="js/main.js"></script>
 	
 </body>

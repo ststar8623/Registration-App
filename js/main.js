@@ -1,7 +1,7 @@
 // get users data
 function userRegistration(form) {
 	// if any form field isn't filled don't go on
-	if(!form.userEmail.value || !form.userPassword.value || !form.userFirst.value || !form.userLast.value || !form.userPhone.value || !form.street.value || !form.city.value || !form.country.value || !form.userGender.value || !form.date.value || !form.month.value || !form.year.value) {
+	if(!form.userEmail.value || !form.userPassword.value || !form.userFirst.value || !form.userLast.value || !form.userPhone.value || !form.street.value || !form.city.value || !form.country.value || !form.userGender.value || !form.date.value || !form.month.value || !form.year.value || !form.lang.value) {
 		
 		if(form.userEmail.value !== form.userRepeatEmail.value || form.userPassword.value !== form.userRepeatPassword.value) {
 			
@@ -44,6 +44,7 @@ function userRegistration(form) {
 		date : form.date.value,
 		month : form.month.value,
 		year : form.year.value,
+		lang : form.lang.value
 	}
 
 	// passing registered user info
@@ -55,7 +56,8 @@ function displayUser(registeredUser) {
 	console.log(registeredUser)
 
 	// selecting elements
-	var userEmail = document.getElementById('userEmail'),
+	var userGreet = document.getElementById('greeting'),
+		userEmail = document.getElementById('userEmail'),
 		userName = document.getElementById('userName'),
 		userPhone = document.getElementById('userPhone'),
 		userAddress = document.getElementById('userAddress'),
@@ -63,6 +65,7 @@ function displayUser(registeredUser) {
 		userBirthday = document.getElementById('userBirthday')
 
 	// add text into elements
+	userGreet.innerText = 
 	userEmail.innerText = "Email: " + registeredUser.email
 	userName.innerText = "Name: " + registeredUser.firstname + " " + registeredUser.lastname
 	userPhone.innerText = "Phone: " + registeredUser.phone
@@ -80,3 +83,4 @@ function displayUser(registeredUser) {
 document.getElementById('registerButton').addEventListener('click', function() {
 	userRegistration(document.newUser)
 }, false)
+
